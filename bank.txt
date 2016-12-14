@@ -1,0 +1,3 @@
+Customer Name=   Tom
+Current Amount= 400.0
+Bank Type=   Savings
