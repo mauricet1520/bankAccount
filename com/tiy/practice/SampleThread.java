@@ -9,14 +9,16 @@ public class SampleThread implements Runnable {
     public void run() {
         System.out.println("Running " + Thread.currentThread().getId());
 
+        for (int i = 0; i < Thread.currentThread().getId() ; i++) {
+            
 
-        double newAmount =day7Runner.bank.listAccounts.get(0).getCurrentAmount() + 1.00;
+            double newAmount = day7Runner.bank.listAccounts.get(0).getCurrentAmount() + 1.00;
 
-        day7Runner.bank.listAccounts.get(0).setCurrentAmount(newAmount);
+            day7Runner.bank.listAccounts.get(0).setCurrentAmount(newAmount);
 
-        System.out.println("Current amount is " + newAmount);
+            System.out.println("Current amount is " + newAmount);
 
-
+        }
         try {
             Thread.sleep(8000);
         } catch (Exception exception) {
