@@ -121,19 +121,14 @@ public class Day7Runner {
 			System.out.println("b = Print bank info");
 			System.out.println("e = Exit");
 
-			int numThreadsStarted =0;
+			int numThreadsStarted = 0;
 
-			while (true) {
+
 				System.out.println("Number of threads started = " + numThreadsStarted);
 				SampleThread localThread = new SampleThread();
 				Thread newThread = new Thread(localThread);
 				newThread.start();
-//            localThread.run();
-				numThreadsStarted++;
-				if (numThreadsStarted > 3) {
-					break;
-				}
-			}
+
 
 			Scanner scanner = new Scanner(System.in);
 			String transaction = scanner.nextLine();
